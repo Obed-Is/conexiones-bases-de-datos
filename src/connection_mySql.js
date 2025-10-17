@@ -1,4 +1,4 @@
-import mySql from 'mysql2';
+import mySql from 'mysql2/promise';
 
 const configMySql = {
     host: process.env.DB_HOST_MS,
@@ -20,6 +20,6 @@ export const getMySql = async () => {
         console.log('Conexion a mySql exitosa 😎');
     } catch (error) {
         console.log('Ocurrio un error al intentar conectarse a mySql Server 💀')
-        console.error(error.message);
+        console.error(error);
     }
 }
